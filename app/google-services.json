@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "912698730998",
+    "firebase_url": "https://people-report.firebaseio.com",
+    "project_id": "people-report",
+    "storage_bucket": "people-report.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912698730998:android:8da1ce4b79d80405",
+        "android_client_info": {
+          "package_name": "com.peoplereport.peoplereport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912698730998-4hgg4r9utq302t1ja6ir5amqgfcduugc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.peoplereport.peoplereport",
+            "certificate_hash": "c2cac04bb0cece7f79941e59f8812f96ebd7b91a"
+          }
+        },
+        {
+          "client_id": "912698730998-9rba7js7rjfnecpeoeakv5v07f3c07sf.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "912698730998-9rba7js7rjfnecpeoeakv5v07f3c07sf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIULDwjCspwLugqgZm147UrhGG46niHAQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912698730998-9rba7js7rjfnecpeoeakv5v07f3c07sf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="16dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                tools:background="@drawable/ic_launcher_background" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarEventDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.AppBarOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_userPerfil"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Esto es una descripcion, media largar para probara como se veran las @android:string/fingerprint_icon_content_description"
+                android:textColor="@color/title_color"
+                android:textSize="14sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/details_userPerfil"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_margin="16dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/username"
+                android:layout_alignStart="@+id/username"
+                android:layout_alignTop="@+id/details_userPerfil"
+                android:text="Titulo del articulo"
+                android:textColor="@color/title_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitle"
+                android:layout_toEndOf="@+id/textView5"
+                android:layout_toRightOf="@+id/textView5"
+                android:text="followers"
+                android:textColor="@color/fui_bgPhone"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textViewDescription"
+                android:layout_margin="16dp"
+                android:background="@color/title_color" />
+
+            <TextView
+                android:id="@+id/textViewLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/view1"
+                android:layout_alignStart="@+id/view1"
+                android:layout_below="@+id/view1"
+                android:text="Likes"
+                android:textColor="@color/title_color" />
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLike"
+                android:layout_margin="16dp"
+                android:drawableLeft="@drawable/heart_empty_vector"
+                android:text="0"
+                android:textColor="@color/title_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/likesRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/textViewLike"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@+id/likes" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/commentRecycleViewPop"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/textView5"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/likes" />
+
+            <ImageButton
+                android:id="@+id/comments_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/shareButton"
+                android:layout_alignStart="@+id/shareButton"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/vector_send_button_gray"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_above="@+id/textViewDescription"
+                android:layout_alignEnd="@+id/textViewDescription"
+                android:layout_alignLeft="@+id/textViewDescription"
+                android:layout_alignRight="@+id/textViewDescription"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/share" />
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/commentRecycleViewPop"
+                android:layout_alignLeft="@+id/likes"
+                android:layout_alignStart="@+id/likes"
+                android:layout_below="@+id/likes"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/likesRecycleView"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/comments_button"
+                android:layout_toRightOf="@+id/comments_button"
+                android:text="Comments"
+                android:textColor="@color/title_color" />
+
+            <TextView
+                android:id="@+id/commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/commentRecycleViewPop"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/commentRecycleViewPop"
+                android:layout_toStartOf="@+id/commentRecycleViewPop"
+                android:drawableLeft="@drawable/coment_vector_icon"
+                android:text="0"
+                android:textColor="@color/title_color"
+                android:drawableStart="@drawable/coment_vector_icon"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/clickToComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="@string/clic_to_comment_and_or_view_more_comments"
+                android:textColor="@color/cardview_dark_background" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

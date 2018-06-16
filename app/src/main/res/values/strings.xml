@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">People Report</string>
+    <string name="title_activity_add_note">AddNoteActivity</string>
+    <string name="title_activity_note_preview">NotePreview</string>
+    <string name="date">Viernes 25 de mayo, 2018</string>
+    <string name="publish_date">29 de octubre del 2018</string>
+    <string name="post_time">hace 10 minutos</string>
+    <string name="ubication">Bonao</string>
+    <string name="title_activity_reports_details">ReportsDetailsActivity</string>
+    <string name="comments_count"> %1$d.</string>
+    <string name="today_string">Today</string>
+    <string name="yesterday_string">Yesterday</string>
+    <string name="clic_to_comment_and_or_view_more_comments">Clic to Comment and /or View more comments</string>
+
+</resources>

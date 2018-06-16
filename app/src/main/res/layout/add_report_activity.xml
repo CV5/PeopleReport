@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        tools:context="org.ccelbuensamaritano.ccbsapp.Acciones.CrearArticulos">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            style="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/postButton"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignBottom="@+id/nameAppBarLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/send_button_vector" />
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/userProfile"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/imageButton2"
+                    android:layout_toRightOf="@+id/imageButton2"
+                    android:src="@drawable/fui_ic_phone_white_24dp" />
+
+                <TextView
+                    android:id="@+id/nameAppBarLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/userProfile"
+                    android:layout_toRightOf="@+id/userProfile"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Christian Veras"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/userProfile"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:focusedByDefault="true"
+                    android:textColorHint="@color/cardview_light_background"
+                    app:hintAnimationEnabled="true">
+
+                    <EditText
+                        android:id="@+id/tituloApublicar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:backgroundTint="@color/cardview_light_background"
+                        android:ems="10"
+                        android:foregroundTint="@color/cardview_light_background"
+                        android:foregroundTintMode="src_over"
+                        android:hint="Titulo"
+                        android:inputType="text|textCapSentences|textAutoCorrect|textMultiLine|textImeMultiLine"
+                        android:shadowColor="@color/cardview_light_background"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@color/cardview_light_background"
+                        android:textColorHighlight="@color/cardview_light_background"
+                        android:textColorHint="@color/cardview_light_background"
+                        android:textColorLink="@color/cardview_light_background"
+                        android:textCursorDrawable="@color/cardview_light_background"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            style="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout2">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="org.ccelbuensamaritano.ccbsapp.Acciones.CrearArticulos"
+               >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_mensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/mensajeAPublicar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="16dp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Description"
+                        android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textImeMultiLine|textLongMessage|textPersonName"
+                        android:textAlignment="textStart"
+                        android:textColorHint="@color/cardview_light_background"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/input_mensaje"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_toEndOf="@+id/boton_publicar"
+                    android:layout_toRightOf="@+id/boton_publicar"
+                    android:background="@color/fui_transparent"
+                    android:backgroundTint="@color/cardview_shadow_end_color"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:id="@+id/btnChoose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignTop="@+id/cardView"
+                        android:layout_toEndOf="@+id/boton_publicar"
+                        android:layout_toRightOf="@+id/boton_publicar"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/add_image_vector" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/boton_publicar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginRight="22dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:visibility="gone"
+                     />
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

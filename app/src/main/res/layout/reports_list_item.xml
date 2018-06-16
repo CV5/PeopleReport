@@ -1,0 +1,390 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/list_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/publish_date"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404" />
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="18dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:foregroundGravity="center"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/list"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.195"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_bias="0.809"-->
+            <!--app:srcCompat="@drawable/ubication_vector"-->
+            <!--tools:ignore="VectorDrawableCompat" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView2"-->
+            <!--android:layout_width="18dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:foregroundGravity="center"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/list"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.417"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_bias="0.809"-->
+            <!--app:srcCompat="@drawable/clock_vector_icon"-->
+            <!--tools:ignore="VectorDrawableCompat" />-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/fui_email_field_name"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.81"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginLeft="12dp" />
+
+        <TextView
+            android:id="@+id/list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/title_color"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toTopOf="@+id/avatar_image"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="12dp" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tiempo_desde_la_publication"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="4dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:foregroundGravity="center"-->
+            <!--android:text="@string/tiempo_desde_la_publication"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+            <!--android:textColor="#8A000000"-->
+            <!--android:textSize="12sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/avatar_image"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.538"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/avatar_image"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/list_title"-->
+            <!--app:layout_constraintVertical_bias="0.333" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/ubication"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:foregroundGravity="center"-->
+            <!--android:text="@string/ubication"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+            <!--android:textColor="#8A000000"-->
+            <!--android:textSize="12sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/avatar_image"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.125"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/avatar_image"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/list_title"-->
+            <!--app:layout_constraintVertical_bias="0.0" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignBottom="@+id/cardview"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.953"
+            tools:ignore="MissingConstraints,NotSibling">
+
+            <TextView
+                android:id="@+id/mViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/eye_vector"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/eye_vector"
+                android:gravity="center_vertical"
+                android:text="1243 Views"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/subtitle_color_gray_light"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+
+                android:drawableLeft="@drawable/heart_empty_vector"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/heart_empty_vector"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:text="153 Likes"
+                android:textColor="@color/subtitle_color_gray_light"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/comment_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/coment_vector_icon"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/coment_vector_icon"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:text="85 Comments"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/subtitle_color_gray_light"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="276dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toTopOf="@+id/avatar_image"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ubication_vector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="@string/ubication"
+                    android:textColor="@color/subtitle_color_gray_light"
+                    android:textSize="12sp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/clock_vector_icon"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/posttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="@string/post_time"
+                    android:textColor="@color/subtitle_color_gray_light"
+                    android:textColorLink="@color/subtitle_color_gray_light"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/publish_date"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/descripcion"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_image" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="2"
+            android:text="Esto es una descripcion de prueba"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/title_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list" />
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/compartir"-->
+            <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="280dp"-->
+            <!--android:layout_marginStart="280dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:contentDescription="@string/fui_email_field_name"-->
+            <!--android:minWidth="0dp"-->
+            <!--android:paddingEnd="8dp"-->
+            <!--android:paddingStart="8dp"-->
+            <!--android:src="@drawable/fui_ic_googleg_color_24dp"-->
+            <!--android:textColor="#DE000000"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@descripciontion" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/favorito"-->
+            <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:contentDescription="@string/fui_email_field_name"-->
+            <!--android:minWidth="0dp"-->
+            <!--android:paddingEnd="8dp"-->
+            <!--android:paddingStart="8dp"-->
+            <!--android:src="@drawable/ic_arrow_right"-->
+            <!--android:textColor="#DE000000"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.975"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/compartir"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/compartir" />-->
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>
